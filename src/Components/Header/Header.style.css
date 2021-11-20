@@ -1,0 +1,67 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 730px;
+    width: 100%;
+    margin-bottom: 2.25rem;
+}
+
+.Header>p{
+    font-size: 1.6rem;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+.Header>button{
+    display: flex;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.Header>button>p{
+    font-size: 0.8rem;
+    padding-right: 16px;
+    text-transform: uppercase;
+}
+
+.Header>button>img{
+    height: 1.25rem;
+}
+
+/* LIGHT MODE */
+.LightHeader>p{
+    color: var(--black);
+    transition-duration: var(--duration);
+}
+
+.LightHeader>button{
+    color: var(--darkBlue);
+    transition-duration: var(--duration);
+}
+
+/* DARK MODE */
+.DarkHeader>p{
+    color: var(--transparent);
+    transition-duration: var(--duration);
+}
+.DarkHeader>button>p{
+    color: var(--transparent);
+    transition-duration: var(--duration);
+}
+
+
+
+@media (min-width: 1200px) {
+    
+    /* LIGHT MODE */
+    .LightHeader>button:hover{
+        filter: brightness(0) saturate(100%) invert(17%) sepia(21%) saturate(754%) hue-rotate(177deg) brightness(90%) contrast(88%);
+    }
+    
+    /* DARK MODE */
+    .DarkHeader>button:hover{
+        filter: brightness(0) saturate(100%) invert(37%) sepia(53%) saturate(502%) hue-rotate(178deg) brightness(92%) contrast(82%);
+    }    
+}

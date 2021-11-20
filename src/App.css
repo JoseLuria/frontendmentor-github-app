@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  /*LIGHT MODE*/
+  --lightBlue: #60ABFF;
+  --blue: #0079FF;
+  --red: #F74646;
+  --darkBlue: #4B6A9B;
+  --gray: #697C9A;
+  --white: #F6F8FF;
+  --transparent: #FEFEFE;
+  --black: #2B3442;
+  --duration: 0.2s;
+
+  /*DARK MODE*/
+  --darkGray: #141D2F;
+  --dark: #1E2A47;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  width: 100%;
   min-height: 100vh;
+  padding: 1.9rem 1.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.AppLight{
+  background-color: var(--white);
+  transition-duration: var(--duration);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.AppDark{
+  background-color: var(--darkGray);
+  transition-duration: var(--duration);
+}
+
+@media (min-width: 767px) {
+  .App{
+    padding: 8.75rem 6rem 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1200px) {
+  .App{
+    padding: 0;
+    justify-content: center;
   }
 }

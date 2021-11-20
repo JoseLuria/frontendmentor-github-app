@@ -1,0 +1,231 @@
+.UserContainer{
+    width: 100%;
+    max-width: 730px;
+    border-radius: 0.9rem;
+    padding: 2rem 1.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.UserContainer>img{
+    display: none;
+}
+
+.MainInfo{
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.MainInfo>img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.InfoUser>div>h1{
+    font-size: 1rem;
+}
+
+.InfoUser>div>p{
+    font-size: 0.8rem;
+    color: var(--blue);
+}
+
+.InfoUser>p{
+    font-size: 0.8rem;
+    margin-top: 6px;
+}
+
+.Bio{
+    font-size: 0.8rem;
+}
+
+.StatsContainer{
+    margin-top: 1.4rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 0.6rem;
+    padding: 18px 14px;
+}
+
+.StatsData{
+    text-align: center;
+    width: 79px;
+    font-size: 0.68rem;
+}
+
+.StatsData>span{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.Link{
+    display: flex;
+    gap: 19.5px;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+.Link>div{
+    height: 20px;
+    width: 20px;
+}
+
+/* LIGHT MODE */
+.UserLight{
+    background-color: var(--transparent);
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    transition-duration: var(--duration);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.MainInfo>.InfoUser>div>h1{
+    color: var(--black);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.MainInfo>.InfoUser>p{
+    color: var(--gray);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.Bio{
+    color: var(--darkBlue);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.StatsContainer>.StatsData{
+    color: var(--darkBlue);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.StatsContainer>.StatsData>span{
+    color: var(--black);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.LinksContainer>.LinkTrue{
+    filter: brightness(0) saturate(100%) invert(41%) sepia(18%) saturate(1214%) hue-rotate(178deg) brightness(91%) contrast(88%);
+    transition-duration: var(--duration);
+}
+
+.UserLight>div>.LinksContainer>.LinkFalse{
+    filter: brightness(0) saturate(100%) invert(45%) sepia(48%) saturate(229%) hue-rotate(177deg) brightness(96%) contrast(94%);
+    transition-duration: var(--duration);
+}
+
+/* DARK MODE */
+.UserDark{
+    background-color: var(--dark);
+    color: var(--transparent);
+    transition-duration: var(--duration);
+}
+
+.UserDark>div>.MainInfo>.InfoUser>p{
+    color: var(--transparent);
+    transition-duration: var(--duration);
+}
+
+.UserDark>div>.StatsContainer{
+    background-color: var(--darkGray);
+}
+
+.UserDark>div>.LinksContainer>.LinkTrue{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(79deg) brightness(102%) contrast(99%);
+    transition-duration: var(--duration);
+}
+
+.UserDark>div>.LinksContainer>.LinkFalse{
+    filter: brightness(0) saturate(100%) invert(45%) sepia(48%) saturate(229%) hue-rotate(177deg) brightness(96%) contrast(94%);
+    transition-duration: var(--duration);
+}
+
+@media (min-width: 768px) {
+    .UserContainer{
+        padding: 2.5rem 2.5rem 2rem;
+    }
+
+    .MainInfo{
+        gap: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .MainInfo>img{
+        width: 117px;
+        height: 117px;
+    }
+
+    .InfoUser{
+        width: 100%;
+    }
+
+    .InfoUser>div>h1{
+        font-size: 1.65rem;
+    }
+    
+    .InfoUser>div>p{
+        font-size: 1rem;
+    }
+
+    .InfoUser>p{
+        font-size: 1rem;
+    }
+
+    .Bio{
+        font-size: 0.9rem;
+    }
+
+    .StatsContainer{
+        margin-top: 2rem;
+        margin-bottom: 1.8rem;
+        padding: 18px 2rem;
+    }
+
+    .StatsData{
+        font-size: 0.81rem;
+    }
+
+    .StatsData>span{
+        font-size: 1.37rem;
+    }
+
+    .LinksContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .Link{
+        font-size: 0.93rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .UserContainer{
+        display: flex;
+        gap: 2.31rem;
+    }
+
+    .UserContainer>img{
+        display: block;
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+    }
+
+    .InfoUser{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .MainInfo>img{
+        display: none;
+    }
+
+    .UserContainer>div{
+        max-width: 480px;
+    }
+}
