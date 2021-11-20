@@ -5,56 +5,72 @@ import Website from '../../Assets/icon-website.svg'
 import Twitter from '../../Assets/icon-twitter.svg'
 import Company from '../../Assets/icon-company.svg'
 
-const UserCard = ({darkMode}) => {
+const UserCard = (props) => {
+
+    const {
+        darkMode,
+        img,
+        name,
+        user,
+        jointed,
+        bio,
+        repos,
+        followers,
+        following,
+        blog,
+        twitter,
+        company,
+        location
+    } = props 
 
     return (
         <main className={darkMode?"UserContainer UserDark":"UserContainer UserLight"}>
-            <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="User" />
+            <img src={img} alt="User" />
             <div>
                 <div className="MainInfo">
-                    <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="User" />
+                    <img src={img} alt="User" />
 
                     <div className="InfoUser">
                         <div>
-                            <h1>the Octocat</h1>
-                            <p>@octocat</p>
+                            <h1>{name}</h1>
+                            <p>@{user}</p>
                         </div>
-                        <p>Joined 25 Jan 2011</p>
+                        <p>Joined {jointed}</p>
                     </div>
                 </div>
-                <p className="Bio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+                <p className="Bio">{bio}</p>
                 <div className="StatsContainer">
-                    <p className="StatsData">Repos<br /><span>8</span></p>
-                    <p className="StatsData">Followers<br /><span>3938</span></p>
-                    <p className="StatsData">Following<br /><span>9</span></p>
+                    <p className="StatsData">Repos<br /><span>{repos?repos:0}</span></p>
+                    <p className="StatsData">Followers<br /><span>{followers?followers:0}</span></p>
+                    <p className="StatsData">Following<br /><span>{following?following:0}</span></p>
                 </div>
                 <div className="LinksContainer">
-                    <div className="Link LinkTrue">
+                    <div className={location?"Link LinkTrue":"Link LinkFalse"}>
                         <div>
                             <img src={Location} alt="Location Logo" />
                         </div>
-                        <p>San Francisco</p>
+                        <p>{location?location:"Not Avaliable"}</p>
                     </div>
 
-                    <div className="Link LinkTrue">
+                    <div className={blog?"Link LinkTrue":"Link LinkFalse"}>
                         <div>
                             <img src={Website} alt="Website Logo" />
                         </div>
-                        <a href="https://github.blog">https://github.blog</a>
+                        <a href={blog} target="_blank" rel="noreferrer">{blog?blog:"Not Avaliable"}</a>
                     </div>
 
-                    <div className="Link LinkFalse">
+                    <div className={twitter?"Link LinkTrue":"Link LinkFalse"}>
                         <div>
                             <img src={Twitter} alt="Twitter Logo" />
                         </div>
-                        <p>Not Available</p>
+                        <p>{twitter?twitter:"Not Avaliable"}</p>
                     </div>
 
-                    <div className="Link LinkTrue">
+                    <div className={company?"Link LinkTrue":"Link LinkFalse"}>
                         <div>
                             <img src={Company} alt="Company Logo" />
                         </div>
-                        <p>@github</p>
+                        <p>{company?company:"Not Avaliable"}</p>
                     </div>
                 </div>
             </div>

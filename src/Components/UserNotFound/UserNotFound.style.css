@@ -1,0 +1,10 @@
+.UserNotFoundCard{
+    width: 100%;
+    max-width: 730px;
+}
+
+@media (min-width: 1200px) {
+    .UserNotFoundCard{
+        height: 444px;
+    }    
+}
