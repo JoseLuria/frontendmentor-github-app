@@ -14,8 +14,8 @@ Finally, start the server with the following command:
 
 ## Features
 
-Light Mode
-![Light Mode](./public/Desktop - Light.jpg)
+### Light Mode
+![Light Mode](./public/DesktopLight.jpg)
 
-Dark Mode
-![Dark Mode](./public/Desktop - Dark.jpg)
+### Dark Mode
+![Dark Mode](./public/DesktopDark.jpg)
