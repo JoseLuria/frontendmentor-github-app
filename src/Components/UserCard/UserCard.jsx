@@ -53,7 +53,7 @@ const UserCard = (props) => {
                         <p>{jointedFormated}</p>
                     </div>
                 </div>
-                <p className="Bio">{bio}</p>
+                <p className="Bio">{bio?bio:"This profile has no bio"}</p>
                 <div className="StatsContainer">
                     <p className="StatsData">Repos<br /><span>{repos?repos:0}</span></p>
                     <p className="StatsData">Followers<br /><span>{followers?followers:0}</span></p>
