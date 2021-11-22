@@ -1,4 +1,4 @@
-## How to run this proyect
+# How to run this proyect
 
 First clone the repository form GitHub:
 
