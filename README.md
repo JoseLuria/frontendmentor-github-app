@@ -11,3 +11,11 @@ Then install the dependencies:
 Finally, start the server with the following command:
 
 ### `npm start`
+
+## Features
+
+Light Mode
+![Light Mode]("./public/Desktop - Light.jpg")
+
+Dark Mode
+![Dark Mode]("./public/Desktop - Dark.jpg")
