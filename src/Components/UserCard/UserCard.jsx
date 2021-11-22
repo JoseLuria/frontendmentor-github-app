@@ -23,6 +23,10 @@ const UserCard = (props) => {
         location
     } = props 
 
+    const jointedData = jointed.slice(0, 10)
+    const jointedArray = jointedData.split("-")
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"]
+
     return (
         <main className={darkMode?"UserContainer UserDark":"UserContainer UserLight"}>
             <img src={img} alt="User" />
@@ -35,7 +39,7 @@ const UserCard = (props) => {
                             <h1>{name}</h1>
                             <p>@{user}</p>
                         </div>
-                        <p>Joined {jointed}</p>
+                        <p>Joined {jointedArray[2]} {months[jointedArray[1] - 1]} {jointedArray[0]}</p>
                     </div>
                 </div>
                 <p className="Bio">{bio}</p>
@@ -56,7 +60,8 @@ const UserCard = (props) => {
                         <div>
                             <img src={Website} alt="Website Logo" />
                         </div>
-                        <a href={blog} target="_blank" rel="noreferrer">{blog?blog:"Not Avaliable"}</a>
+                        {blog?<a href={blog} target="_blank" rel="noreferrer">{blog}</a>:<p className="LinkFalse">Not Avaliable</p>}
+                        
                     </div>
 
                     <div className={twitter?"Link LinkTrue":"Link LinkFalse"}>

@@ -227,5 +227,6 @@
 
     .UserContainer>div{
         max-width: 480px;
+        width: 100%;
     }
 }

@@ -9,7 +9,7 @@ const Header = ({darkMode, handleDarkMode}) => {
             <p>devfinder</p>
 
             <button onClick={handleDarkMode}>
-                <p>{darkMode?"Dark":"Light"}</p>
+                <p>{darkMode?"Light":"Dark"}</p>
                 <img src={darkMode?Sun:Moon} alt={darkMode?"Dark Mode Icon":"Light Mode Icon"} />
             </button>
         </header>
