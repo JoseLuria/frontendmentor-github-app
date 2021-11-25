@@ -1,5 +1,10 @@
+// STYLE
 import './App.css';
+
+// HOOKS
 import { useState } from 'react';
+
+// COMPONENTS
 import Header from './Components/Header/Header';
 import SearchBar from './Components/SearchBar/SearchBar';
 import UserCard from './Components/UserCard/UserCard';

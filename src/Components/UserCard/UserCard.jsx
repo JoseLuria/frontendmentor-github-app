@@ -1,9 +1,18 @@
 import React from 'react'
+
+// STYLE
 import './UserCard.style.css'
+
+// IMAGES
 import Location from '../../Assets/icon-location.svg'
 import Website from '../../Assets/icon-website.svg'
 import Twitter from '../../Assets/icon-twitter.svg'
 import Company from '../../Assets/icon-company.svg'
+
+// COMPONENTS
+import Link from '../Link/Link'
+import StatsData from '../StatsData/StatsData'
+import MainInfo from '../MainInfo/MainInfo'
 
 const UserCard = (props) => {
 
@@ -21,73 +30,24 @@ const UserCard = (props) => {
         twitter,
         company,
         location
-    } = props 
-
-    let jointedFormated = ""
-
-    const handleJointed = () => {
-        if(jointed){
-            if(jointed.length > 1){
-                const jointedData = jointed.slice(0, 10)
-                const jointedArray = jointedData.split("-")
-                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"]
-                jointedFormated = `Joined ${jointedArray[2]} ${months[jointedArray[1] - 1]} ${jointedArray[0]}`
-            }
-        }
-    }
-
-    handleJointed()
+    } = props
 
     return (
         <main className={darkMode?"UserContainer UserDark":"UserContainer UserLight"}>
             <img src={img} alt="User" />
             <div>
-                <div className="MainInfo">
-                    <img src={img} alt="User" />
-
-                    <div className="InfoUser">
-                        <div>
-                            <h1>{name}</h1>
-                            <p>@{user}</p>
-                        </div>
-                        <p>{jointedFormated}</p>
-                    </div>
-                </div>
+                <MainInfo darkMode={darkMode} img={img} user={user} name ={name} jointed={jointed} />
                 <p className="Bio">{bio?bio:"This profile has no bio"}</p>
                 <div className="StatsContainer">
-                    <p className="StatsData">Repos<br /><span>{repos?repos:0}</span></p>
-                    <p className="StatsData">Followers<br /><span>{followers?followers:0}</span></p>
-                    <p className="StatsData">Following<br /><span>{following?following:0}</span></p>
+                    <StatsData darkMode={darkMode} title={"Repos"} data={repos}/>
+                    <StatsData darkMode={darkMode} title={"Followers"} data={followers}/>
+                    <StatsData darkMode={darkMode} title={"Following"} data={following}/>
                 </div>
                 <div className="LinksContainer">
-                    <div className={location?"Link LinkTrue":"Link LinkFalse"}>
-                        <div>
-                            <img src={Location} alt="Location Logo" />
-                        </div>
-                        <p>{location?location:"Not Avaliable"}</p>
-                    </div>
-
-                    <div className={blog?"Link LinkTrue":"Link LinkFalse"}>
-                        <div>
-                            <img src={Website} alt="Website Logo" />
-                        </div>
-                        {blog?<a href={blog} target="_blank" rel="noreferrer">{blog}</a>:<p className="LinkFalse">Not Avaliable</p>}
-                        
-                    </div>
-
-                    <div className={twitter?"Link LinkTrue":"Link LinkFalse"}>
-                        <div>
-                            <img src={Twitter} alt="Twitter Logo" />
-                        </div>
-                        <p>{twitter?twitter:"Not Avaliable"}</p>
-                    </div>
-
-                    <div className={company?"Link LinkTrue":"Link LinkFalse"}>
-                        <div>
-                            <img src={Company} alt="Company Logo" />
-                        </div>
-                        <p>{company?company:"Not Avaliable"}</p>
-                    </div>
+                    <Link darkMode={darkMode} img={Location} data={location} type={"static"}/> 
+                    <Link darkMode={darkMode} img={Website} data={blog} type={"link"}/> 
+                    <Link darkMode={darkMode} img={Twitter} data={twitter} type={"static"}/>
+                    <Link darkMode={darkMode} img={Company} data={company} type={"static"}/>
                 </div>
             </div>
         </main>

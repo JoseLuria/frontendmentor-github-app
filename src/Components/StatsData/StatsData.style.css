@@ -1,0 +1,31 @@
+.StatsData{
+    text-align: center;
+    width: 79px;
+    font-size: 0.68rem;
+}
+
+.StatsData>span{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* LIGHT MODE */
+.StatsLight{
+    color: var(--darkBlue);
+    transition-duration: var(--duration);
+}
+
+.StatsLight>span{
+    color: var(--black);
+    transition-duration: var(--duration);
+}
+
+@media (min-width: 768px) {
+    .StatsData{
+        font-size: 0.81rem;
+    }
+
+    .StatsData>span{
+        font-size: 1.37rem;
+    }
+}
