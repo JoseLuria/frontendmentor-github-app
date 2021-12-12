@@ -18,17 +18,14 @@
     border: none;
     background: none;
     cursor: pointer;
-}
-
-.Header>button>p{
     font-size: 0.8rem;
-    padding-right: 16px;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .Header>button>img{
     height: 1.25rem;
+    padding-left: 16px;
 }
 
 /* LIGHT MODE */
@@ -47,7 +44,7 @@
     color: var(--transparent);
     transition-duration: var(--duration);
 }
-.DarkHeader>button>p{
+.DarkHeader>button{
     color: var(--transparent);
     transition-duration: var(--duration);
 }
