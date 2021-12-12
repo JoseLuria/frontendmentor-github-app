@@ -49,8 +49,6 @@
     transition-duration: var(--duration);
 }
 
-
-
 @media (min-width: 1200px) {
     
     /* LIGHT MODE */
