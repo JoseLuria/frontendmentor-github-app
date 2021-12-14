@@ -9,6 +9,7 @@ import Header from './Components/Header/Header';
 import SearchBar from './Components/SearchBar/SearchBar';
 import UserCard from './Components/UserCard/UserCard';
 import UserNotFound from './Components/UserNotFound/UserNotFound';
+import Div100vh from 'react-div-100vh';
 
 function App() {
 
@@ -39,29 +40,30 @@ function App() {
   }
 
   return (
-    <div className={darkMode?"App AppDark":"App AppLight"}>
+    <Div100vh>
+      <div className={darkMode?"App AppDark":"App AppLight"}>
       <Header darkMode={darkMode} handleDarkMode={handleDarkMode}/>
       <SearchBar darkMode={darkMode} handleUserName={handleUserName} handleGetData={handleGetData} error={error}/>
-      {
-        userData?error?<UserNotFound/>:
-        <UserCard 
-          darkMode={darkMode}
-          img={userData.avatar_url}
-          name={userData.name}
-          user={userData.login}
-          jointed={userData.created_at}
-          bio={userData.bio}
-          repos={userData.public_repos}
-          followers={userData.followers}
-          following={userData.following}
-          blog={userData.blog}
-          twitter={userData.twitter_username}
-          company={userData.company}
-          location={userData.location}
-        />:<UserNotFound/>
-      }
-      
-    </div>
+        {
+          userData?error?<UserNotFound/>:
+          <UserCard 
+            darkMode={darkMode}
+            img={userData.avatar_url}
+            name={userData.name}
+            user={userData.login}
+            jointed={userData.created_at}
+            bio={userData.bio}
+            repos={userData.public_repos}
+            followers={userData.followers}
+            following={userData.following}
+            blog={userData.blog}
+            twitter={userData.twitter_username}
+            company={userData.company}
+            location={userData.location}
+          />:<UserNotFound/>
+        }
+      </div>
+    </Div100vh>  
   );
 }
 

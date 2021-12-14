@@ -54,6 +54,11 @@
     width: 10rem;
     padding-right: 7px;
     font-weight: 700;
+    animation: fadeIn var(--duration);
+    -webkit-animation: fadeIn var(--duration);
+    -moz-animation: fadeIn var(--duration);
+    -o-animation: fadeIn var(--duration);
+    -ms-animation: fadeIn var(--duration);
 }
 
 /* LIGHT MODE */
