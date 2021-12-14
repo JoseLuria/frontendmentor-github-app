@@ -21,6 +21,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     font-weight: 700;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .Header>button>img{
